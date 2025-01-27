@@ -1,0 +1,112 @@
+---
+
+---
+
+<header>
+    <!-- First container -->
+    <div class="container container_image image_1" aria-hidden="true">
+      <div class="title_wrapper">
+        <h1 class="title_1">AGORA TECNICOS</h1>
+        <div class="barra"></div>
+        <h2 class="title_1">ESTUDIO DE ARQUITECTURA</h2>
+      </div>
+    </div>
+  
+    <!-- Second container -->
+    <div class="container container_image image_2" aria-hidden="true">
+      <div class="title_wrapper">
+        <h1 class="title_2">AGORA TECNICOS</h1>
+        <div class="barra"></div>
+        <h2 class="title_2">ESTUDIO DE ARQUITECTURA</h2>
+      </div>
+    </div>
+
+</header>
+
+<style>
+
+
+header {
+  height: 200vh;
+}
+
+.container {
+  /* hide fixed overflow contents */
+  clip: rect(0, auto, auto, 0);
+
+  /* does not work if overflow = visible */
+  overflow: hidden;
+
+  /* only works with absolute positioning */
+  position: absolute;
+
+  /* Make sure containers are full-width and height */
+  height: 100vh;
+  left: 0;
+  width: 100%;
+}
+
+.title_wrapper {
+  position: fixed;
+  display: block;  
+  margin: auto;
+  width: 100%;
+  /* center the text wrapper vertically */
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.title_wrapper h1, h2 {
+  text-align: center;
+  font-size: 6vw;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'SourceSans3', sans-serif;
+  font-weight: 800;
+  margin: 0;
+}
+
+.title_wrapper h2 {
+  font-size: 3vw;
+}
+
+.container_image{
+  background-size:100vw auto;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: black;
+}
+
+.image_1
+{
+  background-image: url('/img/fondo1.webp');
+}
+
+.image_2
+{
+  background-image: url('/img/fondo2.webp');
+  top: 100vh;
+}
+
+.title_1
+{
+  color: white;
+}
+
+.title_2
+{
+  color: white;
+}
+
+.barra
+{
+  height: 1vw;
+  width: 62%;
+  margin: auto;
+  background-color: red;
+}
+
+</style>
