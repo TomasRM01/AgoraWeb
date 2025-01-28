@@ -1,7 +1,6 @@
 ---
 
 ---
-
 <div class="section-wrapper">
   <div class="section dark-section">
     <div class="section-container">
@@ -12,12 +11,12 @@
         </div>
         <div class="section-image">
           <img
-            src='/img/fondo1.webp'
+            src='/img/agoraB.webp'
             alt="landing-hero-blanc-2x"
           />
         </div>
         <a
-          href="#"
+          href="mailto:agoratecnicos@agoratecnicos.com?Subject=Quiero%20trabajar%20con%20vosotros"
           class="section-btn"
           target="_blank"
           rel="noopener noreferrer">Contactar</a
@@ -34,12 +33,12 @@
         </div>
         <div class="section-image">
           <img
-            src='/img/fondo2.webp'
+            src='/img/modernC.webp'
             alt="landing-hero-noir-2x"
           />
         </div>
         <a
-          href="#"
+          href="mailto:agoratecnicos@agoratecnicos.com?Subject=Quiero%20trabajar%20con%20vosotros"
           class="section-btn"
           target="_blank"
           rel="noopener noreferrer">Contactar</a
@@ -48,6 +47,7 @@
     </div>
   </div>
 </div>
+<div class="fix"></div>
 
 <style>
   /* General Reset */
@@ -58,15 +58,12 @@
   }
 
   /* Ensure the entire height is used for the document */
-  html,
-  body {
+  html, body {
     height: 100%;
-    font-family: "SourceSans3", sans-serif;
   }
 
   /* Section wrapper with counter reset */
   .section-wrapper {
-    counter-reset: section-count;
     position: relative;
     height: 100%;
   }
@@ -93,7 +90,7 @@
   /* Section heading styling */
   .section-heading {
     font-size: min(5rem, 9vw);
-    font-weight: 800;
+    font-weight: bolder;
     text-transform: uppercase;
     text-align: center;
     text-decoration: underline;
@@ -102,7 +99,7 @@
 
   .section-subtitle {
     font-size: min(2.5rem, 4.5vw);
-    font-weight: 800;
+    font-weight: bold;
     text-transform: uppercase;
     text-align: center;
   }
@@ -172,6 +169,45 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+  }
+
+  @media (min-width: 768px) {
+    .section-inner {
+      display: grid;
+      grid-template-columns: auto 4rem auto;
+      grid-template-areas: ". . image"
+                           "text . image"
+                           "button . image"
+                           ". . image";
+      align-items: center;
+      justify-content: center;
+      justify-items: center;
+    }
+
+    .section-text {
+      grid-area: text;
+    }
+
+    .section-text .section-heading {
+      font-size: 4.5vw;
+    }
+
+    .section-text .section-subtitle {
+      font-size: 2.25vw;
+    }
+
+    .section-image {
+      grid-area: image;
+    }
+
+    .section-btn {
+      grid-area: button;
+    }
+  }
+
+  /* This prevents the content to hide behind the hero section */
+  .fix {
+        height: 100%;
   }
 
 </style>
