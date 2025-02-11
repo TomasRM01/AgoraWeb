@@ -2,29 +2,84 @@
 const { title } = Astro.props;
 ---
 
-
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-		font-family: "SourceSans3", sans-serif;
-		font-weight: normal;
-		font-style: normal;
-	}
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "SourceSans3", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    background-color: #202125;
+
+    p {
+      font-size: 1.2em;
+      color: #e4e4e4;
+      line-height: 1.8;
+    }
+
+    h2 {
+      font-size: 2em;
+      color: #c92020;
+      margin-bottom: 10px;
+    }
+
+    a {
+      vertical-align: middle;
+      background-color: transparent;
+      border: 2px solid #202125;
+      color: #c92020;
+      border-color: #c92020;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Added box-shadow for button styling */
+      line-height: 1.5;
+      transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+      background-color: rgba(143, 19, 19, 0.342);
+    }
+
+    a.button {
+      min-width: 16rem;
+      padding: 1em 1.6em;
+      letter-spacing: 0.26em;
+      font-weight: 750;
+      text-decoration: none;
+      white-space: nowrap;
+      cursor: pointer;
+      display: inline-block;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    section {
+      padding: 20px;
+      border-radius: 8px;
+      width: 80%;
+      margin: 100px auto 100px auto;
+    }
+
+    strong {
+      font-weight: 800;
+      color: white;
+      text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    }
+
+  }
 </style>
