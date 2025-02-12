@@ -1,4 +1,5 @@
 ---
+import CopyMailButton from "./CopyMailButton.astro";
 
 ---
 
@@ -13,12 +14,15 @@
         <div class="section-image">
           <img src="/img/agoraB.webp" alt="landing-hero-blanc-2x" />
         </div>
-        <a
+        <div class="section-button">
+          <a
           href="mailto:agoratecnicos@agoratecnicos.com?Subject=Quiero%20trabajar%20con%20vosotros"
           class="button"
           target="_blank"
           rel="noopener noreferrer">Contactar</a
-        >
+          >
+          <CopyMailButton />
+        </div>
       </div>
     </div>
   </div>
@@ -32,12 +36,15 @@
         <div class="section-image">
           <img src="/img/modernC.webp" alt="landing-hero-noir-2x" />
         </div>
-        <a
+        <div class="section-button">
+          <a
           href="mailto:agoratecnicos@agoratecnicos.com?Subject=Quiero%20trabajar%20con%20vosotros"
           class="button"
           target="_blank"
           rel="noopener noreferrer">Contactar</a
-        >
+          >
+          <CopyMailButton />
+        </div>
       </div>
     </div>
   </div>
@@ -140,6 +147,14 @@
     color: #e4e4e4;
   }
 
+  .section-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
   @media (min-width: 768px) {
     .section-inner {
       display: grid;
@@ -170,7 +185,7 @@
       grid-area: image;
     }
 
-    .button {
+    .section-button {
       grid-area: button;
     }
   }

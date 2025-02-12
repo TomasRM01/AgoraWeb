@@ -1,0 +1,110 @@
+---
+---
+
+<section id="proyectos">
+    <h2>Proyectos</h2>
+    <div class="gallery">
+        <img src="img/galery/proyectos1.webp" alt="Proyectos 1" loading="lazy">
+        <img src="img/galery/proyectos2.webp" alt="Proyectos 2" loading="lazy">
+        <img src="img/galery/proyectos3.webp" alt="Proyectos 3" loading="lazy">
+        <img src="img/galery/proyectos4.webp" alt="Proyectos 4" loading="lazy">
+        <img src="img/galery/proyectos5.webp" alt="Proyectos 5" loading="lazy">
+    </div>
+</section>
+
+<section id="promociones">
+    <h2>Promociones</h2>
+    <div class="gallery">
+        <img src="img/galery/promociones1.webp" alt="Promociones 1" loading="lazy">
+        <img src="img/galery/promociones2.webp" alt="Promociones 2" loading="lazy">
+        <img src="img/galery/promociones3.webp" alt="Promociones 3" loading="lazy">
+        <img src="img/galery/promociones4.webp" alt="Promociones 4" loading="lazy">
+        <img src="img/galery/promociones5.webp" alt="Promociones 5" loading="lazy">
+        <img src="img/galery/promociones6.webp" alt="Promociones 6" loading="lazy">
+        <img src="img/galery/promociones7.webp" alt="Promociones 7" loading="lazy">
+        <img src="img/galery/promociones8.webp" alt="Promociones 8" loading="lazy">
+    </div>
+</section>
+
+<section id="infografias">
+    <h2>Infografías</h2>
+    <div class="gallery">
+        <img src="img/galery/infografias1.webp" alt="Infografias 1" loading="lazy">
+        <img src="img/galery/infografias2.webp" alt="Infografias 2" loading="lazy">
+        <img src="img/galery/infografias3.webp" alt="Infografias 3" loading="lazy">
+    </div>
+</section>
+
+<section id="rehabilitaciones">
+    <h2>Rehabilitaciones</h2>
+    <div class="gallery">
+        <img src="img/galery/rehabilitacion1.webp" alt="Rehabilitacion 1" loading="lazy">
+        <img src="img/galery/rehabilitacion2.webp" alt="Rehabilitacion 2" loading="lazy">
+        <img src="img/galery/rehabilitacion3.webp" alt="Rehabilitacion 3" loading="lazy">
+        <img src="img/galery/rehabilitacion4.webp" alt="Rehabilitacion 4" loading="lazy">
+    </div>
+</section>
+
+<section id="ascensores">
+    <h2>Ascensores</h2>
+    <div class="gallery">
+        <img src="img/galery/ascensores1.webp" alt="Ascensores 1" loading="lazy">
+        <img src="img/galery/ascensores2.webp" alt="Ascensores 2" loading="lazy">
+    </div>
+</section>
+
+<section id="locales">
+    <h2>Locales</h2>
+    <div class="gallery">
+        <img src="img/galery/locales1.webp" alt="Locales 1" loading="lazy">
+        <img src="img/galery/locales2.webp" alt="Locales 2" loading="lazy">
+        <img src="img/galery/locales3.webp" alt="Locales 3" loading="lazy">
+    </div>
+</section>
+
+
+<style>
+
+    section {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .gallery {
+        display: grid;
+        gap: 32px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta el tamaño mínimo según necesites */
+    }
+
+    img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 4px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        
+        transition: transform 0.3s ease;
+
+        animation: reveal ease-in-out both;
+        animation-timeline: view();
+        animation-range: entry 5% cover 15%;
+    }
+
+    img:hover {
+        transform: scale(1.01);
+        filter: brightness(1.05);
+    }
+
+    @keyframes reveal {
+        from {
+            opacity: 0;
+            translate: 0 100px;
+        }
+        to {
+            opacity: 1;
+            translate: 0 0;
+        }
+    }
+
+
+</style>
