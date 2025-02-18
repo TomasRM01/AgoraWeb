@@ -1,4 +1,8 @@
 ---
+import { Image } from 'astro:assets';
+import heroDark from '/public/img/agoraB.webp';
+import heroLight from '/public/img/modernC.webp';
+
 import CopyMailButton from "./CopyMailButton.astro";
 
 ---
@@ -12,7 +16,7 @@ import CopyMailButton from "./CopyMailButton.astro";
           <h2 class="section-subtitle">Estudio de arquitectura</h2>
         </div>
         <div class="section-image">
-          <img src="/img/agoraB.webp" alt="landing-hero-blanc-2x" />
+          <Image src={heroDark} loading="eager" alt="Ruinas de un templo antiguo con columnas clásicas bajo un cielo oscuro" />
         </div>
         <div class="section-button">
           <a
@@ -34,7 +38,7 @@ import CopyMailButton from "./CopyMailButton.astro";
           <h2 class="section-subtitle">Estudio de arquitectura</h2>
         </div>
         <div class="section-image">
-          <img src="/img/modernC.webp" alt="landing-hero-noir-2x" />
+          <Image src={heroLight} loading="eager" alt="Moderno rascacielos de vidrio reflejando el cielo azul." />
         </div>
         <div class="section-button">
           <a
@@ -111,6 +115,7 @@ import CopyMailButton from "./CopyMailButton.astro";
   /* Image inside section image */
   .section-image img {
     max-width: 100%;
+    height: auto;  /* Ensure the image maintains its aspect ratio */
   }
 
 

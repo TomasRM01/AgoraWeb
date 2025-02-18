@@ -1,64 +1,125 @@
 ---
+import { Image } from 'astro:assets';
+
+const proyectosImages = await Astro.glob('/public/img/gallery/proyectos/*');
+const promocionesImages = await Astro.glob('/public/img/gallery/promociones/*');
+const infografiasImages = await Astro.glob('/public/img/gallery/infografias/*');
+const rehabilitacionesImages = await Astro.glob('/public/img/gallery/rehabilitaciones/*');
+const ascensoresImages = await Astro.glob('/public/img/gallery/ascensores/*');
+const localesImages = await Astro.glob('/public/img/gallery/locales/*');
+const navesImages = await Astro.glob('/public/img/gallery/naves/*');
+const eficienciaImages = await Astro.glob('/public/img/gallery/eficiencia/*');
 ---
 
 <section id="proyectos">
     <h2>Proyectos</h2>
     <div class="gallery">
-        <img src="img/galery/proyectos1.webp" alt="Proyectos 1" loading="lazy">
-        <img src="img/galery/proyectos2.webp" alt="Proyectos 2" loading="lazy">
-        <img src="img/galery/proyectos3.webp" alt="Proyectos 3" loading="lazy">
-        <img src="img/galery/proyectos4.webp" alt="Proyectos 4" loading="lazy">
-        <img src="img/galery/proyectos5.webp" alt="Proyectos 5" loading="lazy">
+        {
+          proyectosImages.map((img) => (
+            <Image
+              src={img.default}
+              alt="Foto de proyectos arquitectónicos"
+            />
+          ))
+        }
     </div>
 </section>
 
 <section id="promociones">
     <h2>Promociones</h2>
     <div class="gallery">
-        <img src="img/galery/promociones1.webp" alt="Promociones 1" loading="lazy">
-        <img src="img/galery/promociones2.webp" alt="Promociones 2" loading="lazy">
-        <img src="img/galery/promociones3.webp" alt="Promociones 3" loading="lazy">
-        <img src="img/galery/promociones4.webp" alt="Promociones 4" loading="lazy">
-        <img src="img/galery/promociones5.webp" alt="Promociones 5" loading="lazy">
-        <img src="img/galery/promociones6.webp" alt="Promociones 6" loading="lazy">
-        <img src="img/galery/promociones7.webp" alt="Promociones 7" loading="lazy">
-        <img src="img/galery/promociones8.webp" alt="Promociones 8" loading="lazy">
+        {
+          promocionesImages.map((img) => (
+            <Image
+              src={img.default}
+              alt="Foto de promociones"
+            />
+          ))
+        }
     </div>
 </section>
 
 <section id="infografias">
     <h2>Infografías</h2>
     <div class="gallery">
-        <img src="img/galery/infografias1.webp" alt="Infografias 1" loading="lazy">
-        <img src="img/galery/infografias2.webp" alt="Infografias 2" loading="lazy">
-        <img src="img/galery/infografias3.webp" alt="Infografias 3" loading="lazy">
+        {
+          infografiasImages.map((img) => (
+            <Image
+              src={img.default}
+              alt="Infografía"
+            />
+          ))
+        }
     </div>
 </section>
 
 <section id="rehabilitaciones">
     <h2>Rehabilitaciones</h2>
     <div class="gallery">
-        <img src="img/galery/rehabilitacion1.webp" alt="Rehabilitacion 1" loading="lazy">
-        <img src="img/galery/rehabilitacion2.webp" alt="Rehabilitacion 2" loading="lazy">
-        <img src="img/galery/rehabilitacion3.webp" alt="Rehabilitacion 3" loading="lazy">
-        <img src="img/galery/rehabilitacion4.webp" alt="Rehabilitacion 4" loading="lazy">
+        {
+          rehabilitacionesImages.map((img) => (
+            <Image
+              src={img.default}
+              alt="Rehabilitación"
+            />
+          ))
+        }
     </div>
 </section>
 
 <section id="ascensores">
     <h2>Ascensores</h2>
     <div class="gallery">
-        <img src="img/galery/ascensores1.webp" alt="Ascensores 1" loading="lazy">
-        <img src="img/galery/ascensores2.webp" alt="Ascensores 2" loading="lazy">
+        {
+          ascensoresImages.map((img) => (
+            <Image
+              src={img.default}
+              alt="Ascensor"
+            />
+          ))
+        }
     </div>
 </section>
 
 <section id="locales">
     <h2>Locales</h2>
     <div class="gallery">
-        <img src="img/galery/locales1.webp" alt="Locales 1" loading="lazy">
-        <img src="img/galery/locales2.webp" alt="Locales 2" loading="lazy">
-        <img src="img/galery/locales3.webp" alt="Locales 3" loading="lazy">
+        {
+          localesImages.map((img) => (
+            <Image
+              src={img.default}
+              alt="Local"
+            />
+          ))
+        }
+    </div>
+</section>
+
+<section id="naves">
+    <h2>Naves</h2>
+    <div class="gallery">
+        {
+          navesImages.map((img) => (
+            <Image
+              src={img.default}
+              alt="Nave"
+            />
+          ))
+        }
+    </div>
+</section>
+
+<section id="eficiencia">
+    <h2>Eficiencia</h2>
+    <div class="gallery">
+        {
+          eficienciaImages.map((img) => (
+            <Image
+              src={img.default}
+              alt="Eficiencia"
+            />
+          ))
+        }
     </div>
 </section>
 
@@ -78,6 +139,7 @@
 
     img {
         width: 100%;
+        height: auto;
         aspect-ratio: 1 / 1;
         object-fit: cover;
         border-radius: 4px;

@@ -1,37 +1,83 @@
 ---
+import { Image } from 'astro:assets';
+import estudioInterior from '/public/img/estudio_interior.webp';
 
 ---
 
 <section>
   <h2>Sobre nosotros</h2>
-  <p>
-    En <strong>AGORA TECNICOS</strong>, ofrecemos una gestión inmobiliaria
-    integral, abarcando desde la viabilidad y promoción de proyectos hasta su
-    ejecución y entrega.
-  </p>
-  <p>
-    Nuestro equipo de <strong>arquitectos e ingenieros especializados</strong> proporciona
-    dirección de proyectos, asesoramiento técnico, servicios periciales y
-    gestión con empresas constructoras, garantizando un <strong>riguroso control</strong> de
-    costes y plazos.
-  </p>
-  <p>
-    Con más de <strong>25 años de experiencia</strong>, trabajamos con particulares, empresas y
-    administraciones para desarrollar <strong>soluciones eficientes y personalizadas</strong>.
-  </p>
-  <p>
-    Confía en nuestra experiencia para <strong>hacer realidad tu proyecto</strong>.
-  </p>
+  <div class="about">
+    <div class="texto">
+      <p>
+        En <strong>AGORA TECNICOS</strong>, ofrecemos una gestión inmobiliaria
+        integral, abarcando desde la viabilidad y promoción de proyectos hasta su
+        ejecución y entrega.
+      </p>
+      <p>
+        Nuestro equipo de <strong>arquitectos e ingenieros especializados</strong> proporciona
+        dirección de proyectos, asesoramiento técnico, servicios periciales y
+        gestión con empresas constructoras, garantizando un <strong>riguroso control</strong> de
+        costes y plazos.
+      </p>
+      <p>
+        Con más de <strong>25 años de experiencia</strong>, trabajamos con particulares, empresas y
+        administraciones para desarrollar <strong>soluciones eficientes y personalizadas</strong>.
+      </p>
+      <p>
+        Confía en nuestra experiencia para <strong>hacer realidad tu proyecto</strong>.
+      </p>
+    </div>
+    <div class="imagen">
+      <Image src={estudioInterior} alt="Interior del estudio" />
+    </div>
+  </div>
   <div class="section-button">
     <a class="button" onclick="window.location.href='/about'">Saber más</a>
   </div>
 </section>
 
 <style>
-    .section-button {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-    }
+  .about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 
+  .texto {
+    flex: 1.5;
+  }
+
+  .imagen {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
+  }
+
+  img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  @media (max-width: 1200px) {
+    .about {
+      flex-direction: column;
+    }
+    .imagen {
+      margin-left: 0;
+    }
+  }
+
+  .section-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  
 </style>
